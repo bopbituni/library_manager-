@@ -1,8 +1,8 @@
 <?php
 
-include "ConnectDatabase/DBConnect.php";
-include "readers/Display.php";
-include "readers/Students.php";
+include_once "ConnectDatabase/DBConnect.php";
+include_once "readers/Display.php";
+include_once "readers/Students.php";
 
 $display = new Display();
 if (isset($_GET['id'])) {
@@ -42,8 +42,8 @@ foreach ($array as $item) {
         <td><u><a href="displayBooks.php">Books</a></u></td>
         <td><u><a href="displayStudents.php">Reader</a></u></td>
         <td><u><a href="">Borrow books</a></u></td>
-        <td><u><a href="">Author</a></u></td>
-        <td><u><a href="addNewStudent.php">Categories</a></u></td>
+        <td><u><a href="Authors/displayAuthor.php"></a></u></td>
+        <td><u><a href="Category/display.php">Categories</a></u></td>
 
     </tr>
 

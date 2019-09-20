@@ -52,4 +52,25 @@ class Display
         $stmt->execute();
     }
 
+    public function connectTableAuthor($table1, $table2, $id)
+    {
+
+        $sql = "SELECT $table1.name FROM $table2 INNER JOIN $table1 ON $table1.id = $table2.author_id WHERE $table1.id = $id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll();
+
+    }
+    public function connectTableCategory($table1, $table2, $id)
+    {
+
+        $sql = "SELECT $table1.name FROM $table2 INNER JOIN $table1 ON $table1.id = $table2.category_id WHERE $table1.id = $id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll();
+
+    }
+
+
+
 }
